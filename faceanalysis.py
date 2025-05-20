@@ -102,7 +102,7 @@ def mask_from_landmarks(image, landmarks):
 
 class InsightFace:
     def __init__(self, provider="CPU", name="buffalo_l"):
-        self.face_analysis = FaceAnalysis(name=name, root=INSIGHTFACE_DIR, providers=[provider + 'ExecutionProvider',])
+        self.face_analysis = FaceAnalysis(name=name, root=INSIGHTFACE_DIR)
         self.face_analysis.prepare(ctx_id=0, det_size=(640, 640))
         self.thresholds = THRESHOLDS["ArcFace"]
 
